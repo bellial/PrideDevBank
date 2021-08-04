@@ -2,14 +2,18 @@ package executavel;
 
 import java.util.Scanner;
 
+<<<<<<< HEAD
 import Exceptions.SaldoInsufucienteException;
 import dominio.Cliente;
 import dominio.Conta;
 import dominio.ContaCorrente;
+=======
+>>>>>>> 568c6b8d27921aff243605f81d3668589c4aa49e
 
 public class EntradaDados {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 
 		String gatinhosDaTv[] = { "Mel Gibson", "Deniro", "Fagundes", "Caio Castro" ,"Matheus Solano"};
 		
@@ -40,6 +44,17 @@ public class EntradaDados {
 			System.out.println("Digite um texto:");
 			texto =entrada.nextLine();
 		}
+=======
+	 
+		
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("digite o valor a ser sacado:");
+		int valor = entrada.nextInt();
+		
+		
+		
+		CaixaEletronico.retirar(valor);
+>>>>>>> 568c6b8d27921aff243605f81d3668589c4aa49e
 
 	}
 

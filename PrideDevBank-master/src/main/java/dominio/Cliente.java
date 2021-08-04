@@ -14,8 +14,11 @@ public class Cliente {
 	}
 
 	public String getNome() {
+<<<<<<< HEAD
 		if(true)
 			throw new RuntimeException("erro Generico");
+=======
+>>>>>>> 568c6b8d27921aff243605f81d3668589c4aa49e
 		return nomeCorrentista;
 	}
 
