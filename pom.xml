@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
+=======
+>>>>>>> 2bec5f772435f3b2ced40788ce455e09be07789d
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -65,3 +69,17 @@
 	</build>
 
 </project>
+=======
+	<groupId>PrideDevBank</groupId>
+	<artifactId>PrideDevBank</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.6.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
+>>>>>>> 2bec5f772435f3b2ced40788ce455e09be07789d
