@@ -1,0 +1,24 @@
+spring:
+    datasource:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8fbc81ca55580bd50df7c61d9bdcd770c1463673
+        username: priss
+        password: 123trocar
+        url: jdbc:mysql://pridedevdatabase.c3lbe0bvk2jp.us-east-1.rds.amazonaws.com/priss
+    jpa:
+        hibernate:
+            ddl-auto: update
+            show-sql: true
+<<<<<<< HEAD
+=======
+=======
+        username: alice
+        password: alice
+        url: jdbc:mysql://pridedevdatabase.c3lbe0bvk2jp.us-east-1.rds.amazonaws.com/alice
+    jpa:
+        hibernate:
+            ddl-auto: update
+>>>>>>> 23c38b5009fc485b7681285fe1ef33f88069513a
+>>>>>>> 8fbc81ca55580bd50df7c61d9bdcd770c1463673
