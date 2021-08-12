@@ -1,5 +1,6 @@
 package com.priss.prideDevBank.controller;
 
+
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class ClienteController {
 
 	@Autowired
 	ClienteService service;
+	
 
 	@PostMapping(value = "/cliente", consumes = "application/json", produces = "application/json")
 	public ResponseEntity<ClienteEntity> criaCliente(@RequestBody ClienteEntity cliente) {

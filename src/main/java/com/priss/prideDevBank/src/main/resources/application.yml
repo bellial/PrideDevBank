@@ -1,9 +1,0 @@
-spring:
-    datasource:
-        username: priss
-        password: 123trocar
-        url: jdbc:mysql://pridedevdatabase.c3lbe0bvk2jp.us-east-1.rds.amazonaws.com/priss
-    jpa:
-        hibernate:
-            ddl-auto: update
-            show-sql: true

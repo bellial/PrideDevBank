@@ -1,5 +1,6 @@
 package com.priss.prideDevBank.services;
 
+
 import static com.priss.prideDevBank.util.ValidationUtil.validarCPF;
 
 import java.util.Optional;
@@ -16,9 +17,7 @@ public class ClienteService {
 	@Autowired
 	ClienteRepository clienteRespository;
 
-	@Autowired
-	ClienteEntity cliente;
-
+	
 	public ClienteEntity criarNovoCliente(ClienteEntity cliente) {
 		validarCPF(cliente.getCpf());
 		clienteRespository.save(cliente);

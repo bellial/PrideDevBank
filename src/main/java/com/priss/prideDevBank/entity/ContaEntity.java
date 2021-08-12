@@ -2,6 +2,7 @@ package com.priss.prideDevBank.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +12,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "conta")
@@ -22,38 +25,53 @@ public class ContaEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	private String numero;
-	private String conta;
-	@OneToOne
+	
+	@JsonProperty("numeroAgencia")
+	private String numeroAgencia;
+	
+	@JsonProperty("numeroConta")
+	private String numeroConta;	
+	
+	@JsonProperty("Saldo")
+	private Double saldo;
+	
+	@OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name = "id_cliente", referencedColumnName = "id")
 	private ClienteEntity cliente;
-
-	public String getNumero() {
-		return numero;
+	
+	public String getNumeroAgencia() {
+		return numeroAgencia;
 	}
-
-	public String getConta() {
-		return conta;
+	public String getNumeroConta() {
+		return numeroConta;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public Integer getId() {
+		return this.id;
 	}
-
-	public void setConta(String conta) {
-		this.conta = conta;
+	public void setNumeroAgencia(String numeroAgencia) {
+		this.numeroAgencia = numeroAgencia;
 	}
-
+	public void setNumeroConta(String numeroConta) {
+		this.numeroConta = numeroConta;
+	}
 	public ClienteEntity getCliente() {
 		return cliente;
 	}
-
 	public void setCliente(ClienteEntity cliente) {
 		this.cliente = cliente;
 	}
+	public Double getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
+	}
+	
+	
+	
+
 
 }

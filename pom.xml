@@ -13,7 +13,7 @@
 	<artifactId>prideDevBank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>prideDevBank</name>
-	<description>pride dev banc</description>
+	<description>pride dev bank</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
