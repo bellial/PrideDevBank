@@ -3,6 +3,9 @@ package com.priss.prideDevBank.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.priss.prideDevBank.entity.ContaEntity;
+import com.priss.prideDevBank.exception.ContaInsuficienteExeption;
+
 public class ValidationUtil {
 
 	public static void validarCPF(String cpf) {
@@ -16,6 +19,13 @@ public class ValidationUtil {
 
 		if (!matches) {
 			throw new RuntimeException("CPF Invalido");
+		}
+	}
+
+	public static void validaSaldo(ContaEntity conta, Double valorTransacao) {
+		if (valorTransacao > conta.getSaldo()) {
+			throw new ContaInsuficienteExeption("saldo insuficiente");
+
 		}
 	}
 }

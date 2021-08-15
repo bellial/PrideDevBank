@@ -15,19 +15,19 @@ import com.priss.prideDevBank.repository.ClienteRepository;
 public class ClienteService {
 
 	@Autowired
-	ClienteRepository clienteRespository;
+	ClienteRepository clienteRepository;
 
 	
 	public ClienteEntity criarNovoCliente(ClienteEntity cliente) {
 		validarCPF(cliente.getCpf());
-		clienteRespository.save(cliente);
+		clienteRepository.save(cliente);
 
 		return cliente;
 
 	}
 
 	public ClienteEntity pesquisaCliente(Integer id) {
-		Optional<ClienteEntity> clienteOptional = clienteRespository.findById(id);
+		Optional<ClienteEntity> clienteOptional = clienteRepository.findById(id);
 
 		if (clienteOptional.isPresent()) {
 			return clienteOptional.get();

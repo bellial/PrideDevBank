@@ -1,16 +1,17 @@
 package com.priss.prideDevBank.repository;
 
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.priss.prideDevBank.entity.ClienteEntity;
 import com.priss.prideDevBank.entity.ContaEntity;
 
-public interface ContaRepository extends CrudRepository<ClienteEntity, Integer> {
+@Repository
+public interface ContaRepository extends JpaRepository<ContaEntity, Integer> {
 
-ContaEntity findByNumeroConta( String numeroConta);
-	
-	ContaEntity findByNumeroContaAndNumeroAgencia(String numeroConta, String numeroAgencia);
-
-	void save(ContaEntity conta);
+	public List<ContaEntity> findByNumeroAgenciaAndNumeroConta(String numeroAgencia, String numeroConta);
 
 }

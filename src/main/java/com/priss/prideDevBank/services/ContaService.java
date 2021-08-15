@@ -1,5 +1,6 @@
 package com.priss.prideDevBank.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,11 @@ public class ContaService {
 	}
 
 	public ContaEntity getConta(String numeroAgencia, String numeroConta) {
-		Optional<ContaEntity> contaOptional = contaRepository.findById(1);
-
-		ContaEntity contaEntity = contaOptional.get();
-
+		List<ContaEntity> contaList = contaRepository
+				.findByNumeroAgenciaAndNumeroConta(numeroAgencia, numeroConta);
+		
+		ContaEntity contaEntity = contaList.get(0);
+		
 		return contaEntity;
 
 	}

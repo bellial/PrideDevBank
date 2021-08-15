@@ -1,5 +1,6 @@
 package com.priss.prideDevBank.entity;
 
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,41 +15,30 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name="transacao")
+@Table(name = "transacao")
 @Component
 public class TransacaoEntity {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	@JsonProperty("tipo")
 	private String tipo;
-	
+
 	@JsonProperty("valor")
 	private Double valor;
 	@ManyToOne
 	@JoinColumn(name = "id_conta", referencedColumnName = "id")
 	private ContaEntity contaOrigem;
-	
+	@JsonProperty("data")
+	private LocalDateTime data;
+
 	public Integer getId() {
 		return id;
 	}
 
-	public Double getValor() {
-		return valor;
-	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public void setValor(Double valor) {
-		this.valor = valor;
-	}
-	public ContaEntity getContaOrigem() {
-		return contaOrigem;
-	}
-	public void setContaOrigem(ContaEntity contaOrigem) {
-		this.contaOrigem = contaOrigem;
 	}
 
 	public String getTipo() {
@@ -58,8 +48,29 @@ public class TransacaoEntity {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	
-	
-	
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public ContaEntity getContaOrigem() {
+		return contaOrigem;
+	}
+
+	public void setContaOrigem(ContaEntity contaOrigem) {
+		this.contaOrigem = contaOrigem;
+	}
+
+	public LocalDateTime getData() {
+		return data;
+	}
+
+	public void setData(LocalDateTime data) {
+		this.data = data;
+	}
+
 }
