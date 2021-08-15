@@ -1,3 +1,3 @@
 # PrideDevBank
 
-A Java App for a bank using Junit, Maven and Spring boot, learned in the PrideDev course.
+A Java API for a bank using Junit, Maven and Spring boot, developed during the PrideDev course. 
